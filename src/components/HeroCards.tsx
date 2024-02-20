@@ -1,6 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Badge } from "./ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import { Badge } from './ui/badge'
+import { Button, buttonVariants } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -8,10 +8,10 @@ import {
   CardHeader,
   CardTitle,
   CardFooter,
-} from "@/components/ui/card";
-import { Check, Linkedin } from "lucide-react";
-import { LightBulbIcon } from "./Icons";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+} from '@/components/ui/card'
+import { Check, Linkedin } from 'lucide-react'
+import { LightBulbIcon } from './Icons'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 
 export const HeroCards = () => {
   return (
@@ -20,10 +20,7 @@ export const HeroCards = () => {
       <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <AvatarImage
-              alt=""
-              src="https://github.com/shadcn.png"
-            />
+            <AvatarImage alt="" src="https://github.com/shadcn.png" />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
 
@@ -63,8 +60,8 @@ export const HeroCards = () => {
               href="https://github.com/leoMirandaa"
               target="_blank"
               className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
+                variant: 'ghost',
+                size: 'sm',
               })}
             >
               <span className="sr-only">Github icon</span>
@@ -74,8 +71,8 @@ export const HeroCards = () => {
               href="https://twitter.com/leo_mirand4"
               target="_blank"
               className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
+                variant: 'ghost',
+                size: 'sm',
               })}
             >
               <span className="sr-only">X icon</span>
@@ -94,8 +91,8 @@ export const HeroCards = () => {
               href="https://www.linkedin.com/"
               target="_blank"
               className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
+                variant: 'ghost',
+                size: 'sm',
               })}
             >
               <span className="sr-only">Linkedin icon</span>
@@ -109,22 +106,17 @@ export const HeroCards = () => {
       <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
-            Free
-            <Badge
-              variant="secondary"
-              className="text-sm text-primary"
-            >
-              Most popular
+            Testkonto
+            <Badge variant="secondary" className="text-sm text-primary">
+              Kom igång
             </Badge>
           </CardTitle>
           <div>
-            <span className="text-3xl font-bold">$0</span>
-            <span className="text-muted-foreground"> /month</span>
+            <span className="text-3xl font-bold">10 000kr</span>
+            <span className="text-muted-foreground"> /mån</span>
           </div>
 
-          <CardDescription>
-            Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.
-          </CardDescription>
+          <CardDescription>Allt du behöver för att komma igång</CardDescription>
         </CardHeader>
 
         <CardContent>
@@ -135,17 +127,17 @@ export const HeroCards = () => {
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["4 Team member", "4 GB Storage", "Upto 6 pages"].map(
-              (benefit: string) => (
-                <span
-                  key={benefit}
-                  className="flex"
-                >
-                  <Check className="text-green-500" />{" "}
-                  <h3 className="ml-2">{benefit}</h3>
-                </span>
-              )
-            )}
+            {[
+              'Eget Kuberneteskluster',
+              'Kopplat till Github',
+              'Obegränsad bandbredd',
+              '',
+            ].map((benefit: string) => (
+              <span key={benefit} className="flex">
+                <Check className="text-green-500" />{' '}
+                <h3 className="ml-2">{benefit}</h3>
+              </span>
+            ))}
           </div>
         </CardFooter>
       </Card>
@@ -166,5 +158,5 @@ export const HeroCards = () => {
         </CardHeader>
       </Card>
     </div>
-  );
-};
+  )
+}

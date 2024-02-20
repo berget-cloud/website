@@ -9,23 +9,14 @@ export const Hero = () => {
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              Shadcn
-            </span>{" "}
-            landing page
+            <span className="inline bg-gradient-to-r from-[#d2f7fc]  to-[#aabbcc] text-transparent bg-clip-text">
+              BERGET
+            </span>
           </h1>{" "}
-          for{" "}
-          <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-              React
-            </span>{" "}
-            developers
-          </h2>
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Build your React landing page effortlessly with the required sections
-          to your project.
+         Berget är en molntjänst där AI/LLM kan köras utan risk för dataläckage. Den är utformad för organisationer som vill experimentera med AI-lösningar men samtidigt följa höga krav på datasäkerhet, exempelvis offentlig förvaltning, skola/universitet och finansbranschen. All data bevaras i Sverige och Berget är fristående från utländska ägare och aktörer.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">

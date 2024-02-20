@@ -26,15 +26,15 @@ interface RouteProps {
 const routeList: RouteProps[] = [
   {
     href: "#features",
-    label: "Features",
+    label: "Om oss",
   },
   {
     href: "#testimonials",
-    label: "Testimonials",
+    label: "Kunder",
   },
   {
     href: "#pricing",
-    label: "Pricing",
+    label: "Priser",
   },
   {
     href: "#faq",
@@ -54,7 +54,6 @@ export const Navbar = () => {
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
-              ShadcnUI/React
             </a>
           </NavigationMenuItem>
 

@@ -8,6 +8,9 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["IBM Plex Sans", "sans-serif"],
+    },
     container: {
       center: true,
       padding: "1.5rem",
