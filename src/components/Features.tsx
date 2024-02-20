@@ -1,74 +1,64 @@
-import { Badge } from "./ui/badge";
+import { Badge } from './ui/badge'
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import image from "../assets/growth.png";
-import image3 from "../assets/reflecting.png";
-import image4 from "../assets/looking-ahead.png";
+} from '@/components/ui/card'
+import image from '../assets/growth.png'
+import image3 from '../assets/reflecting.png'
+import image4 from '../assets/looking-ahead.png'
 
 interface FeatureProps {
-  title: string;
-  description: string;
-  image: string;
+  title: string
+  description: string
+  image: string
 }
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: 'Säkerhet genom öppenhet',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      'Om din verksamhet omfattas av myndighetskrav är chansen stor att du inte får använda tjänster utanför EU. Med vår tjänst kan du också dra nyttan av AI. Vår säkerhet bygger på transparens, öppenhet och stark kryptering. All källkod  är öppen vilket gör att den granskas av tusentals utvecklare varje dag.',
     image: image4,
   },
   {
-    title: "Intuitive user interface",
+    title: 'Enkelt att komma igång',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      'På några minuter har du ett Kuberneteskluster. Där har vi förberett en vektordatabas och lagt nycklar till våra AI-apier. Vi hjälper dig att komma igång och stöttar med allt från strategi till utveckling.',
     image: image3,
   },
   {
-    title: "AI-Powered insights",
+    title: 'Flexibelt och utbyggbart',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      'Backup, övervakning, support, utvecklarhjälp, strategi och juridik. Vi har ett stort nätverk av entreprenörer som hjälper dig.',
     image: image,
   },
-];
+]
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
-];
+  'Säkert',
+  'Enkelt',
+  'Flexibelt',
+  'Grön el',
+  'GDPR kompatibelt',
+]
 
 export const Features = () => {
   return (
-    <section
-      id="features"
-      className="container py-24 sm:py-32 space-y-8"
-    >
+    <section id="features" className="container py-24 sm:py-32 space-y-8">
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+        AI kräver{' '}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+          att du tar datafrågorna på allvar
         </span>
       </h2>
 
       <div className="flex flex-wrap md:justify-center gap-4">
         {featureList.map((feature: string) => (
           <div key={feature}>
-            <Badge
-              variant="secondary"
-              className="text-sm"
-            >
+            <Badge variant="secondary" className="text-sm">
               {feature}
             </Badge>
           </div>
@@ -95,5 +85,5 @@ export const Features = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}

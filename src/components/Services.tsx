@@ -1,33 +1,69 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import cubeLeg from "../assets/cube-leg.png";
+import { Card, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { MagnifierIcon, WalletIcon, ChartIcon } from './Icons'
+import cubeLeg from '../assets/cube-leg.png'
 
 interface ServiceProps {
-  title: string;
-  description: string;
-  icon: JSX.Element;
+  title: string
+  description: string
+  launch: boolean
+  swedish?: boolean
+  icon: JSX.Element
 }
+
+/*
+
+Namn	Fördel	Släpps	Förstår svenska?
+Mistral 8x7B	Snabb	Vid lansering	✅
+Mistral Medium	Jämförbar med GPT-4	Vid lansering	✅
+Mistral 7B	Supersnabb	Vid lansering	
+GPT-SW3	Tränad på nordiska språken	Kommer under våren	✅
+CodeLlama 70B	Bra på att programmera	Kommer under våren	
+Valfri modell	Välj och vraka hos Huggingface	Kommer i höst	
+*/
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+    title: 'Mistral Medium',
+    description: 'Jämförbar med GPT-4. Vid lansering. Förstår svenska.',
+    swedish: true,
+    launch: true,
     icon: <ChartIcon />,
   },
   {
-    title: "Project Management",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+    title: 'Mistral 8x7B',
+    description: 'Snabb. Vid lansering. Förstår svenska.',
+    swedish: true,
+    launch: true,
     icon: <WalletIcon />,
   },
   {
-    title: "Task Automation",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+    title: 'Mistral 7B',
+    description: 'Supersnabb. Vid lansering. Förstår svenska.',
+    swedish: true,
+    launch: true,
     icon: <MagnifierIcon />,
   },
-];
+  {
+    title: 'GPT-SW3',
+    description:
+      'Tränad på nordiska språken. Kommer under våren. Förstår svenska.',
+    swedish: true,
+    launch: false,
+    icon: <ChartIcon />,
+  },
+  {
+    title: 'CodeLlama 70B',
+    description: 'Bra på att programmera. Kommer under våren.',
+    launch: false,
+    icon: <WalletIcon />,
+  },
+  {
+    title: 'Valfri modell',
+    description: 'Välj och vraka hos Huggingface. Kommer i höst.',
+    launch: false,
+    icon: <MagnifierIcon />,
+  },
+]
 
 export const Services = () => {
   return (
@@ -36,32 +72,38 @@ export const Services = () => {
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
+              LLM Modeller{' '}
             </span>
-            Services
+            som ingår
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+            Dessa LLM-modeller finns tillgängliga för dig att använda. API
+            nycklar ingår med obegränsad användning. OpenAI kompatibelt API.
           </p>
 
           <div className="flex flex-col gap-8">
-            {serviceList.map(({ icon, title, description }: ServiceProps) => (
-              <Card key={title}>
-                <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-                  <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
-                    {icon}
-                  </div>
-                  <div>
-                    <CardTitle>{title}</CardTitle>
-                    <CardDescription className="text-md mt-2">
-                      {description}
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-            ))}
+            {serviceList.map(
+              ({ icon, title, description, swedish }: ServiceProps) => (
+                <Card key={title}>
+                  <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
+                    <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
+                      {icon}
+                    </div>
+                    <div>
+                      <CardTitle>{title}</CardTitle>
+                      <CardDescription className="text-md mt-2">
+                        {description}
+                      </CardDescription>
+                    </div>
+                    <div className="flex-grow"></div>
+                    {swedish && (
+                      <span className="text-primary">🇸🇪 Förstår svenska</span>
+                    )}
+                  </CardHeader>
+                </Card>
+              )
+            )}
           </div>
         </div>
 
@@ -72,5 +114,5 @@ export const Services = () => {
         />
       </div>
     </section>
-  );
-};
+  )
+}
