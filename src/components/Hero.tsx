@@ -9,15 +9,13 @@ export const Hero = () => {
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-[#d2f7fc]  to-[#aabbcc] text-transparent bg-clip-text">
-              Molnet
-            </span>
+            Molnet i<br />
+            Berget
           </h1>{' '}
-          i<h2>BERGET</h2>
         </main>
 
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Berget är en molntjänst där AI/LLM kan köras utan risk för
+        <p className=" text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
+          Berget är en molntjänst där AI-lösningar kan köras utan risk för
           dataläckage. Den är utformad för organisationer som vill experimentera
           med AI-lösningar men samtidigt följa höga krav på datasäkerhet,
           exempelvis offentlig förvaltning, skola/universitet och
@@ -35,7 +33,7 @@ export const Hero = () => {
               variant: 'outline',
             })}`}
           >
-            Öppen källkod
+            Bygger på öppen källkod
             <GitHubLogoIcon className="ml-2 w-5 h-5" />
           </a>
         </div>

@@ -1,6 +1,6 @@
 import { Card, CardDescription, CardHeader, CardTitle } from './ui/card'
 import { MagnifierIcon, WalletIcon, ChartIcon } from './Icons'
-import cubeLeg from '../assets/cube-leg.png'
+import rack from '../assets/rack.jpg'
 
 interface ServiceProps {
   title: string
@@ -24,29 +24,28 @@ Valfri modell	Välj och vraka hos Huggingface	Kommer i höst
 const serviceList: ServiceProps[] = [
   {
     title: 'Mistral Medium',
-    description: 'Jämförbar med GPT-4. Vid lansering. Förstår svenska.',
+    description: 'Jämförbar med GPT-4. Vid lansering. Svenska.',
     swedish: true,
     launch: true,
     icon: <ChartIcon />,
   },
   {
     title: 'Mistral 8x7B',
-    description: 'Snabb. Vid lansering. Förstår svenska.',
+    description: 'Snabb. Vid lansering. Svenska.',
     swedish: true,
     launch: true,
     icon: <WalletIcon />,
   },
   {
     title: 'Mistral 7B',
-    description: 'Supersnabb. Vid lansering. Förstår svenska.',
+    description: 'Supersnabb. Vid lansering. Svenska.',
     swedish: true,
     launch: true,
     icon: <MagnifierIcon />,
   },
   {
     title: 'GPT-SW3',
-    description:
-      'Tränad på nordiska språken. Kommer under våren. Förstår svenska.',
+    description: 'Tränad på nordiska språken. Kommer under våren. Svenska.',
     swedish: true,
     launch: false,
     icon: <ChartIcon />,
@@ -72,9 +71,9 @@ export const Services = () => {
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              LLM Modeller{' '}
+              AI Modeller{' '}
             </span>
-            som ingår
+            kompatibla med Berget
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
@@ -97,9 +96,7 @@ export const Services = () => {
                       </CardDescription>
                     </div>
                     <div className="flex-grow"></div>
-                    {swedish && (
-                      <span className="text-primary">🇸🇪 Förstår svenska</span>
-                    )}
+                    {swedish && <span className="text-primary">Svenska</span>}
                   </CardHeader>
                 </Card>
               )
@@ -108,8 +105,8 @@ export const Services = () => {
         </div>
 
         <img
-          src={cubeLeg}
-          className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
+          src={rack}
+          className="w-[300px] md:w-[500px] lg:w-[300px] object-contain"
           alt="About services"
         />
       </div>

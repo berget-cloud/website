@@ -17,7 +17,7 @@ export const About = () => {
                 <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
                   Om{' '}
                 </span>
-                BERGET
+                Berget
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

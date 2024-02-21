@@ -40,6 +40,10 @@ const routeList: RouteProps[] = [
     href: '#faq',
     label: 'FAQ',
   },
+  {
+    href: 'https://cloud.iteam.services',
+    label: 'Logga in',
+  },
 ]
 
 export const Navbar = () => {
@@ -50,7 +54,7 @@ export const Navbar = () => {
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <a href="/" className="ml-2 font-bold text-xl flex">
-              <LogoIcon />
+              BERGET
             </a>
           </NavigationMenuItem>
 

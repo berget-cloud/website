@@ -1,4 +1,5 @@
 import { Radar, AirVent, Gamepad, Italic } from 'lucide-react'
+import iteam from '../assets/iteam.png'
 
 interface SponsorProps {
   icon: JSX.Element
@@ -7,7 +8,7 @@ interface SponsorProps {
 
 const sponsors: SponsorProps[] = [
   {
-    icon: <Italic size={34} />,
+    icon: <img src={iteam} width={34} height={34} />,
     name: 'Iteam',
   },
   {
@@ -24,7 +25,7 @@ export const Sponsors = () => {
   return (
     <section id="sponsors" className="container pt-24 sm:py-32">
       <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
-        Vi som ligger bakom BERGET
+        Vi som ligger bakom Berget
       </h2>
 
       <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
