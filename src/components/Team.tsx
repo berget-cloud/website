@@ -1,4 +1,5 @@
 import { buttonVariants } from '@/components/ui/button'
+import * as Gravatar from 'react-gravatar'
 import {
   Card,
   CardContent,
@@ -7,11 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Facebook, Instagram, Linkedin } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 
 interface TeamProps {
   imageUrl: string
   name: string
+  email: string
   position: string
   socialNetworks: SociaNetworkslProps[]
 }
@@ -26,24 +28,22 @@ const teamList: TeamProps[] = [
     imageUrl: 'https://i.pravatar.cc/150?img=35',
     name: 'Christian Landgren',
     position: 'VD',
+    email: 'christian.landgren@iteam.se',
     socialNetworks: [
-      { name: 'Linkedin', url: 'http://linkedin.com' },
+      { name: 'Linkedin', url: 'http://linkedin.com/in/christianlandgren' },
       {
-        name: 'Facebook',
-        url: 'https://www.facebook.com/',
-      },
-      {
-        name: 'Instagram',
-        url: 'https://www.instagram.com/',
+        name: 'Twitter',
+        url: 'https://www.x.com/landgren',
       },
     ],
   },
   {
     imageUrl: 'https://i.pravatar.cc/150?img=60',
     name: 'John Angelmo',
+    email: 'john@getgeek.se',
     position: 'Hårdvara och nätverk',
     socialNetworks: [
-      { name: 'Linkedin', url: 'http://linkedin.com' },
+      { name: 'Linkedin', url: 'https://www.linkedin.com/in/angelmo' },
       {
         name: 'Facebook',
         url: 'https://www.facebook.com/',
@@ -57,6 +57,7 @@ const teamList: TeamProps[] = [
   {
     imageUrl: 'https://i.pravatar.cc/150?img=36',
     name: 'Robert Lyngman',
+    email: 'robert@hybridity.ai',
     position: 'Juridik',
     socialNetworks: [
       { name: 'Linkedin', url: 'http://linkedin.com' },
@@ -64,18 +65,6 @@ const teamList: TeamProps[] = [
       {
         name: 'Instagram',
         url: 'https://www.instagram.com/',
-      },
-    ],
-  },
-  {
-    imageUrl: 'https://i.pravatar.cc/150?img=17',
-    name: 'Bruce Rogers',
-    position: 'Backend Developer',
-    socialNetworks: [
-      { name: 'Linkedin', url: 'http://linkedin.com' },
-      {
-        name: 'Facebook',
-        url: 'https://www.facebook.com/',
       },
     ],
   },
@@ -92,6 +81,8 @@ export const Team = () => {
 
       case 'Instagram':
         return <Instagram size="20" />
+      case 'Twitter':
+        return <Twitter size="20" />
     }
   }
 
@@ -111,15 +102,14 @@ export const Team = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
         {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
+          ({ name, email, position, socialNetworks }: TeamProps) => (
             <Card
               key={name}
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
             >
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                <img
-                  src={imageUrl}
-                  alt={`${name} ${position}`}
+                <Gravatar
+                  email={email}
                   className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
                 />
                 <CardTitle className="text-center">{name}</CardTitle>
@@ -127,10 +117,6 @@ export const Team = () => {
                   {position}
                 </CardDescription>
               </CardHeader>
-
-              <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </CardContent>
 
               <CardFooter>
                 {socialNetworks.map(({ name, url }: SociaNetworkslProps) => (

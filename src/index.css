@@ -1,5 +1,5 @@
 @import url('@fontsource/ibm-plex-sans');
-@import url('@fontsource/playfair-display');
+@import url('@fontsource/jetbrains-mono');
 
 html {
   scroll-behavior: smooth;
@@ -12,17 +12,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Jetbrains Mono', sans-serif;
 }
 
 /* HeroCards background shadow */
 .shadow {
   position: absolute;
-  background: hsl(var(--primary) / 0%);
+  background: hsl(220, 59, 37, 0.5);
   border-radius: 24px;
   rotate: 35deg;
 
-  width: 260px;
+  width: 600px;
   top: 200px;
   height: 400px;
   filter: blur(150px);
@@ -31,12 +31,12 @@ h6 {
 
 @keyframes shadow-slide {
   from {
-    background: hsl(var(--primary) / 20%);
+    background: hsla(220, 62%, 20%, 0.6);
     right: 460px;
   }
   to {
-    background: hsl(var(--primary) / 80%);
-    right: 160px;
+    background: hsla(220, 63%, 46%, 1);
+    right: 260px;
   }
 }
 

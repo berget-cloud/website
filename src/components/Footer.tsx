@@ -9,31 +9,11 @@ export const Footer = () => {
         <div className="col-span-full xl:col-span-2">
           <a href="/" className="font-bold text-xl flex">
             <LogoIcon />
+            <span className="ml-2">Berget</span>
           </a>
           <p className="mt-4 text-muted-foreground">
             Götgatan 18, 118 46 Stockholm
           </p>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Github
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Twitter
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Dribbble
-            </a>
-          </div>
         </div>
 
         <div className="flex flex-col gap-2">
@@ -45,20 +25,17 @@ export const Footer = () => {
           </div>
 
           <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Mobile
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Desktop
+            <a
+              href="https://cloud.iteam.services"
+              className="opacity-60 hover:opacity-100"
+            >
+              Berget Console
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">About</h3>
+          <h3 className="font-bold text-lg">Om oss</h3>
           <div>
             <a href="#" className="opacity-60 hover:opacity-100">
               Features
@@ -77,38 +54,17 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Youtube
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Discord
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Twitch
-            </a>
-          </div>
-        </div>
       </section>
 
       <section className="container pb-14 text-center">
         <h3>
-          &copy; 2024 Landing page made by{' '}
+          &copy; 2024{' '}
           <a
             target="_blank"
-            href="https://github.com/leoMirandaa"
+            href="https://github.com/berget"
             className="text-primary transition-all border-primary hover:border-b-2"
           >
-            Leo Miranda
+            Molnet i Berget AB
           </a>
         </h3>
       </section>

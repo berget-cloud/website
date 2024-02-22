@@ -12,7 +12,8 @@ import { ScrollToTop } from './components/ScrollToTop'
 import { Services } from './components/Services'
 import { Sponsors } from './components/Sponsors'
 import { Team } from './components/Team'
-import { Testimonials } from './components/Testimonials'
+import { Compliance } from './components/Compliance'
+
 import './App.css'
 
 function App() {
@@ -21,13 +22,17 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <Compliance />
       <Sponsors />
       <About />
       <Services />
       <Cta />
       <Team />
+      {/*
+      }
       <Pricing />
       <Newsletter />
+    */}
       <FAQ />
       <Footer />
       <ScrollToTop />

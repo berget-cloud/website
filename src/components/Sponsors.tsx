@@ -1,22 +1,22 @@
 import { Radar, AirVent, Gamepad, Italic } from 'lucide-react'
-import iteam from '../assets/iteam.png'
+import iteam from '../assets/iteam.svg'
+import hybridity from '../assets/hybridity.svg'
 
 interface SponsorProps {
-  icon: JSX.Element
+  icon?: JSX.Element
   name: string
 }
 
 const sponsors: SponsorProps[] = [
   {
-    icon: <img src={iteam} width={34} height={34} />,
+    icon: <img src={iteam} height="26" />,
     name: 'Iteam',
   },
   {
-    icon: <AirVent size={34} />,
+    icon: <img src={hybridity} height="26" />,
     name: 'Hybridity AI',
   },
   {
-    icon: <Gamepad size={34} />,
     name: 'GetGeek',
   },
 ]
@@ -24,7 +24,7 @@ const sponsors: SponsorProps[] = [
 export const Sponsors = () => {
   return (
     <section id="sponsors" className="container pt-24 sm:py-32">
-      <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
+      <h2 className="text-center text-md lg:text-xl font-bold mb-8">
         Vi som ligger bakom Berget
       </h2>
 
@@ -34,8 +34,11 @@ export const Sponsors = () => {
             key={name}
             className="flex items-center gap-1 text-muted-foreground/60"
           >
-            <span>{icon}</span>
-            <h3 className="text-xl  font-bold">{name}</h3>
+            {icon ? (
+              <span>{icon}</span>
+            ) : (
+              <h3 className="text-white text-opacity-60 text-xl">{name}</h3>
+            )}
           </div>
         ))}
       </div>

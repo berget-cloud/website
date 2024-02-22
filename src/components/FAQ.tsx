@@ -24,16 +24,17 @@ const FAQList: FAQProps[] = [
     value: 'item-2',
   },
   {
-    question: 'Får man tillgång till ett helt Kubernetskluster?',
+    question:
+      'Får man tillgång till ett helt Kubernetskluster eller ett namespace i ett delat?',
     answer:
-      'Ja, all din data sparas i ett separat kuberneteskluster för dig och dina utvecklare. Du får automatiskt en domänadress pekad på ditt kluster. Denna adress kan du använda dig av för att testa men också peka andra applikationer på?',
+      'Ja, all din data sparas i ett separat kuberneteskluster för dig och dina utvecklare. Du får automatiskt en domänadress pekad på ditt kluster. Denna adress kan du använda dig av för att testa men också peka andra applikationer på. Ingen data delas med andra kunder och du har ett eget nätverk för dina applikationer.',
     value: 'item-3',
   },
   {
     question:
       'Hur ställer jag in så att min kod automatiskt skickas till Berget?',
     answer:
-      'Bästa sättet är att installera FluxCD - den kan lyssna på ändringar i Github och hämta nya versioner av din kod och uppdatera automatiskt.',
+      'Bästa sättet är att installera FluxCD - den kan lyssna på ändringar i Github och hämta nya versioner av din kod och uppdatera automatiskt. Det är enligt vår erfarenhet det bästa sättet att uppnå en bra driftsäkerhet och att alltid ha den senaste versionen av din kod i drift.',
     value: 'item-4',
   },
 ]
@@ -61,12 +62,12 @@ export const FAQ = () => {
       </Accordion>
 
       <h3 className="font-medium mt-4">
-        Still have questions?{' '}
+        Fler frågor?{' '}
         <a
-          href="#"
+          href="#cta"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
-          Contact us
+          Kontakta oss
         </a>
       </h3>
     </section>

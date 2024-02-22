@@ -1,5 +1,5 @@
 import { Statistics } from './Statistics'
-import pilot from '../assets/pilot.png'
+import pilot from '../assets/rack.jpg'
 
 export const About = () => {
   return (
@@ -20,11 +20,12 @@ export const About = () => {
                 Berget
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                Berget är en tjänst köra och bygga AI-applikationer i din egen
+                miljö utan att utsätta din data för risker. Vi erbjuder flera
+                olika AI-modeller som kan köras direkt på ditt data utan att
+                behöva lämna din infrastruktur. Vi är en svensk startup som har
+                som mål att göra AI tillgängligt för alla - inte bara de som
+                vågar riskera att skicka sin data till stora molnleverantörer.
               </p>
             </div>
 

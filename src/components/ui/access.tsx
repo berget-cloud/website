@@ -16,21 +16,17 @@ export function Access() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Tillgång till klustret</CardTitle>
-        <CardDescription>
-          Tillgång till klustret styrs via grupper och roller i Github.
-        </CardDescription>
+        <CardTitle>Säkerhet med BankID</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="flex space-x-2">
-          <Input placeholder="Användarnamn" readOnly />
+          <Input placeholder="Personnr" readOnly />
           <Button variant="secondary" className="shrink-0">
             Bjud in
           </Button>
         </div>
         <Separator className="my-4" />
         <div className="space-y-4">
-          <h4 className="text-sm font-medium">Dessa har tillgång</h4>
           <div className="grid gap-6">
             <div className="flex items-center justify-between space-x-4">
               <div className="flex items-center space-x-4">

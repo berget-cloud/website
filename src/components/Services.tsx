@@ -2,6 +2,11 @@ import { Card, CardDescription, CardHeader, CardTitle } from './ui/card'
 import { MagnifierIcon, WalletIcon, ChartIcon } from './Icons'
 import rack from '../assets/rack.jpg'
 
+import mistral from '../assets/mistral.png'
+import llama from '../assets/llama.png'
+import aiSweden from '../assets/ai-sweden.png'
+import huggingface from '../assets/huggingface.png'
+
 interface ServiceProps {
   title: string
   description: string
@@ -23,65 +28,75 @@ Valfri modell	Välj och vraka hos Huggingface	Kommer i höst
 
 const serviceList: ServiceProps[] = [
   {
-    title: 'Mistral Medium',
-    description: 'Jämförbar med GPT-4. Vid lansering. Svenska.',
+    title: 'Mistral Next',
+    description:
+      'Senaste modellen som släppts. Finns tillgänlig vid lansering. Förstår svenska.',
     swedish: true,
     launch: true,
-    icon: <ChartIcon />,
+    icon: <img src={mistral} className="w-24" />,
+  },
+  {
+    title: 'Mistral Medium',
+    description:
+      'Jämförbar med GPT-4. Finns tillgänlig vid lansering. Förstår svenska.',
+    swedish: true,
+    launch: true,
+    icon: <img src={mistral} className="w-24" />,
   },
   {
     title: 'Mistral 8x7B',
-    description: 'Snabb. Vid lansering. Svenska.',
+    description: 'Snabb. Finns tillgänlig vid lansering. Förstår svenska.',
     swedish: true,
     launch: true,
-    icon: <WalletIcon />,
+    icon: <img src={mistral} className="w-24" />,
   },
   {
     title: 'Mistral 7B',
-    description: 'Supersnabb. Vid lansering. Svenska.',
+    description: 'Supersnabb. Finns tillgänlig vid lansering. Förstår svenska.',
     swedish: true,
     launch: true,
-    icon: <MagnifierIcon />,
+    icon: <img src={mistral} className="w-24" />,
   },
   {
     title: 'GPT-SW3',
     description: 'Tränad på nordiska språken. Kommer under våren. Svenska.',
     swedish: true,
     launch: false,
-    icon: <ChartIcon />,
+    icon: <img src={aiSweden} className="w-24" />,
   },
   {
     title: 'CodeLlama 70B',
     description: 'Bra på att programmera. Kommer under våren.',
     launch: false,
-    icon: <WalletIcon />,
+    icon: <img src={llama} className="w-24" />,
   },
   {
     title: 'Valfri modell',
     description: 'Välj och vraka hos Huggingface. Kommer i höst.',
     launch: false,
-    icon: <MagnifierIcon />,
+    icon: <img src={huggingface} className="w-24" />,
   },
 ]
 
 export const Services = () => {
   return (
     <section className="container py-24 sm:py-32">
-      <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
+      <div className="grid gap-8 place-items-center">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              AI Modeller{' '}
+              AI-modeller{' '}
             </span>
-            kompatibla med Berget
+            du kan använda
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
             Dessa LLM-modeller finns tillgängliga för dig att använda. API
-            nycklar ingår med obegränsad användning. OpenAI kompatibelt API.
+            nycklar skapas automatiskt och du betalar per token. OpenAI
+            kompatibelt API.
           </p>
 
-          <div className="flex flex-col gap-8">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
             {serviceList.map(
               ({ icon, title, description, swedish }: ServiceProps) => (
                 <Card key={title}>
@@ -103,12 +118,6 @@ export const Services = () => {
             )}
           </div>
         </div>
-
-        <img
-          src={rack}
-          className="w-[300px] md:w-[500px] lg:w-[300px] object-contain"
-          alt="About services"
-        />
       </div>
     </section>
   )

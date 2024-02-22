@@ -15,30 +15,40 @@ import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import Shell, { Code } from './ui/shell'
 export const HeroCards = () => {
   return (
-    <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
-      <Card className="absolute w-[350px] -left-[40px] top-[90px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
-        <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
+    <div className="hidden lg:flex justify-center flex-row flex-wrap gap-8 relative w-[700px]">
+      <Card className=" w-[450px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-red">
+        <CardHeader className="space-y-1 flex md:flex-row  items-start gap-4">
           <div>
-            <CardTitle>Enkelt att komma igång</CardTitle>
-            {/* prettier-ignore */}
-            <Shell>
-              $ npm i -g @berget/cli<br/>
-              $ berget login<br />
-              ...<br />
-              $ berget create cluster<br/>
-              ✅ DNS ideal-palmtree.berget.cloud<br />
-              $ berget apply -f deployment.yaml<br/>
-            </Shell>
-            <CardDescription className="text-md mt-2">
-              Nu är ditt kluster redo att användas. Skapa ett namespace och
-              börja köra dina applikationer. Tips: använd fluxcd för att
-              automatiskt hålla klustret uppdaterat.
+            <CardTitle>Av utvecklare för utvecklare</CardTitle>
+            <CardDescription>
+              <Shell>
+                $ npm i -g @berget/cli
+                <br />
+                $ berget login
+                <br />
+                ... loggar in med BankID ...
+                <br />
+                $ berget create cluster
+                <br />
+                Done!
+                <br />
+                Assigned DNS: ideal-palmtree.berget.cloud
+              </Shell>
+              <p className="text-lg mt-2">
+                Nu är ditt kluster redo att användas. Nu kan du börja köra dina
+                applikationer. Du kan peka ett CNAME till klustret.
+              </p>
+              <Shell>$ berget apply -f deployment.yaml</Shell>
+              <p>
+                Tips: använd fluxcd för att automatiskt hålla klustret
+                uppdaterat.
+              </p>
             </CardDescription>
           </div>
         </CardHeader>
       </Card>
 
-      {/* Pricing */}
+      {/* Pricing 
       <Card className="absolute top-[250px] right-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
@@ -78,6 +88,7 @@ export const HeroCards = () => {
           </div>
         </CardFooter>
       </Card>
+      */}
 
       {/* Service */}
     </div>

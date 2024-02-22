@@ -14,17 +14,22 @@ export const Hero = () => {
           </h1>{' '}
         </main>
 
-        <p className=" text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
+        <p className="text-muted-foreground md:text-2xl  md:w-10/12 mx-auto lg:mx-0">
           Berget är en molntjänst där AI-lösningar kan köras utan risk för
-          dataläckage. Den är utformad för organisationer som vill experimentera
-          med AI-lösningar men samtidigt följa höga krav på datasäkerhet,
-          exempelvis offentlig förvaltning, skola/universitet och
-          finansbranschen. All data bevaras i Sverige och Berget är fristående
-          från utländska ägare och aktörer.
+          dataläckage.
+        </p>
+        <p className="text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
+          Tjänsten är utformad för organisationer som vill experimentera med
+          AI-lösningar men samtidigt följa höga krav på datasäkerhet, exempelvis
+          offentlig förvaltning, skola/universitet och finansbranschen. All data
+          bevaras i Sverige och Berget är fristående från utländska ägare och
+          aktörer.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Boka demo</Button>
+          <Button className="w-full md:w-1/3">
+            <a href="#cta">Boka demo</a>
+          </Button>
 
           <a
             href="https://github.com/Iteam1337/berget.git"
