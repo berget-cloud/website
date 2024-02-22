@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: berget-ingress
+  namespace: berget
+  annotations:
+    kubernetes.io/ingress.class: 'nginx'
+    nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
+    nginx.ingress.kubernetes.io/http2-push-preload: 'true'
+    nginx.ingress.kubernetes.io/proxy-pass-headers: 'Location'
+    # nginx.ingress.kubernetes.io/configuration-snippet: |
+    #   more_set_headers "Content-Security-Policy: default-src 'self'; script-src https://berget.cloud https://matomo.iteam.services; style-src https://berget.cloud; font-src https://berget.cloud; img-src https://berget.cloud; connect-src https://berget.cloud https://matomo.iteam.services; manifest-src data:; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; ";
+    #   more_set_headers "X-Content-Type-Options: nosniff";
+    #   more_set_headers "X-Frame-Options: DENY";
+    #   more_set_headers "X-Xss-Protection: 0";
+    #   more_set_headers "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload";
+    #   more_set_headers "Cross-Origin-Resource-Policy: same-site";
+    #   more_set_headers "Referrer-Policy strict-origin";
+    cert-manager.io/cluster-issuer: 'letsencrypt-prod'
+    external-dns.alpha.kubernetes.io/hostname: berget.cloud.
+
+spec:
+  tls:
+    - hosts:
+        - berget.cloud
+      secretName: berget-prod-tls
+  rules:
+    - host: berget.cloud
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: berget
+                port:
+                  number: 3000

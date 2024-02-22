@@ -1,0 +1,10 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: berget
+  namespace: flux-system
+spec:
+  image: ghcr.io/iteam1337/berget
+  interval: 30s
+  provider: generic

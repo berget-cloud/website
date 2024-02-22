@@ -1,10 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: berget
+  namespace: berget
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: berget.cloud.
+spec:
+  ports:
+    - port: 3000
+  type: ClusterIP
+  externalIPs:
+    - 94.142.251.116
+  selector:
+    app: berget
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: berget-deployment
+  name: berget
   namespace: berget
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: berget
@@ -15,39 +31,18 @@ spec:
     spec:
       containers:
         - name: berget
-          image: ghcr.io/berget/berget:main
+          image: ghcr.io/berget-cloud/website # {"$imagepolicy": "flux-system:berget"}
           ports:
             - containerPort: 3000
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: berget-service
-  namespace: berget
-spec:
-  selector:
-    app: berget
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8080
-
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: berget-ingress
-  namespace: berget
-spec:
-  rules:
-    - host: berget.cloud
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: berget-service
-                port:
-                  number: 3000
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
