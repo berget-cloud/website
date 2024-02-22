@@ -18,7 +18,7 @@ metadata:
     #   more_set_headers "Referrer-Policy strict-origin";
     cert-manager.io/cluster-issuer: 'letsencrypt-prod'
     external-dns.alpha.kubernetes.io/hostname: berget.cloud.
-    external-dns.alpha.kubernetes.io/target: 94.142.251.119 # remove when we have automatic IP assignment
+    external-dns.alpha.kubernetes.io/target: 94.142.251.120 # remove when we have automatic IP assignment
 
 spec:
   tls:

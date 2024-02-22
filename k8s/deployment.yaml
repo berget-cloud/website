@@ -3,9 +3,6 @@ kind: Service
 metadata:
   name: berget
   namespace: berget
-  annotations:
-    external-dns.alpha.kubernetes.io/hostname: berget.cloud.
-    external-dns.alpha.kubernetes.io/target: 94.142.251.119 # remove when we have automatic IP assignment
 spec:
   ports:
     - port: 80
