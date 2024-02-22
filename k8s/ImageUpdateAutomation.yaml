@@ -3,7 +3,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
   name: berget
-  namespace: flux-system
+  namespace: berget
 spec:
   interval: 1m0s
   sourceRef:

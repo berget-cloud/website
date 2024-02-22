@@ -3,7 +3,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
 metadata:
   name: berget
-  namespace: flux-system
+  namespace: berget
 spec:
   image: ghcr.io/berget-cloud/website
   interval: 30s
