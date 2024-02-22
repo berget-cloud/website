@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:latest
 
 # Copy the built application from the previous stage to the Nginx default public directory
-COPY --from=dist /app/build /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose a port for the application to listen on
 EXPOSE 80
