@@ -5,12 +5,13 @@ metadata:
   namespace: berget
   annotations:
     external-dns.alpha.kubernetes.io/hostname: berget.cloud.
+    external-dns.alpha.kubernetes.io/endpoints-type: HostIP
 spec:
   ports:
     - port: 80
   type: ClusterIP
   externalIPs:
-    - 94.142.251.116
+    - 94.142.251.119
   selector:
     app: berget
 ---

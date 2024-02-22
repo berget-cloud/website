@@ -38,7 +38,7 @@ export const Hero = () => {
               variant: 'outline',
             })}`}
           >
-            Bygger på öppen källkod
+            Berget är Open Source
             <GitHubLogoIcon className="ml-2 w-5 h-5" />
           </a>
         </div>

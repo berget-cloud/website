@@ -18,6 +18,7 @@ metadata:
     #   more_set_headers "Referrer-Policy strict-origin";
     cert-manager.io/cluster-issuer: 'letsencrypt-prod'
     external-dns.alpha.kubernetes.io/hostname: berget.cloud.
+    external-dns.alpha.kubernetes.io/endpoints-type: HostIP
 
 spec:
   tls:

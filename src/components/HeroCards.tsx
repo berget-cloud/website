@@ -5,6 +5,15 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import Shell from './ui/shell'
+
+const Prompt = () => {
+  return (
+    <span className="text-primary">
+      <span className="text-teal-900">$</span>&nbsp;
+    </span>
+  )
+}
+
 export const HeroCards = () => {
   return (
     <div className="hidden lg:flex justify-center flex-row flex-wrap gap-8 relative w-[700px]">
@@ -14,17 +23,22 @@ export const HeroCards = () => {
             <CardTitle>Av utvecklare för utvecklare</CardTitle>
             <CardDescription>
               <Shell>
-                $ npm i -g @berget/cli
+                <Prompt />
+                npm i -g @berget/cli
                 <br />
-                $ berget login
+                <Prompt />
+                berget login
                 <br />
-                ... loggar in med BankID ...
+                <span className="text-teal-900">... loggar in med BankID</span>
                 <br />
-                $ berget create cluster
+                <Prompt />
+                berget create cluster
                 <br />
-                Done!
+                <span className="text-teal-900">Done!</span>
                 <br />
-                Assigned DNS: ideal-palmtree.berget.cloud
+                <span className="text-teal-900">
+                  Assigned DNS: ideal-palmtree.berget.cloud
+                </span>
               </Shell>
               <p className="text-lg mt-2">
                 Nu är ditt kluster redo att användas. Nu kan du börja köra dina
