@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: berget
-          image: ghcr.io/berget-cloud/website # {"$imagepolicy": "flux-system:berget"}
+          image: ghcr.io/berget-cloud/website:main # {"$imagepolicy": "flux-system:berget"}
           ports:
             - containerPort: 3000
           readinessProbe:
