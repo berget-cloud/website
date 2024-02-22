@@ -14,13 +14,13 @@ RUN npm install
 COPY . .
 
 # Build the application
-RUN npm build
+RUN npm run build
 
 # Use an official Nginx runtime as the base image
 FROM nginx:latest
 
 # Copy the built application from the previous stage to the Nginx default public directory
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=dist /app/build /usr/share/nginx/html
 
 # Expose a port for the application to listen on
 EXPOSE 80

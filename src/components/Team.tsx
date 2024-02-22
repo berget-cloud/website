@@ -1,14 +1,16 @@
 import { buttonVariants } from '@/components/ui/button'
-import * as Gravatar from 'react-gravatar'
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
+
+import christian from '../assets/christian_landgren.jpg'
+import robert from '../assets/robert_lyngman.jpg'
+import john from '../assets/john_angelmo.jpg'
 
 interface TeamProps {
   imageUrl: string
@@ -25,7 +27,7 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: 'https://i.pravatar.cc/150?img=35',
+    imageUrl: christian,
     name: 'Christian Landgren',
     position: 'VD',
     email: 'christian.landgren@iteam.se',
@@ -38,24 +40,20 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: 'https://i.pravatar.cc/150?img=60',
+    imageUrl: john,
     name: 'John Angelmo',
     email: 'john@getgeek.se',
-    position: 'Hårdvara och nätverk',
+    position: 'Infrastruktur',
     socialNetworks: [
       { name: 'Linkedin', url: 'https://www.linkedin.com/in/angelmo' },
       {
-        name: 'Facebook',
-        url: 'https://www.facebook.com/',
-      },
-      {
-        name: 'Instagram',
-        url: 'https://www.instagram.com/',
+        name: 'Twitter',
+        url: 'https://twitter.com/veidit',
       },
     ],
   },
   {
-    imageUrl: 'https://i.pravatar.cc/150?img=36',
+    imageUrl: robert,
     name: 'Robert Lyngman',
     email: 'robert@hybridity.ai',
     position: 'Juridik',
@@ -102,14 +100,14 @@ export const Team = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
         {teamList.map(
-          ({ name, email, position, socialNetworks }: TeamProps) => (
+          ({ name, imageUrl, position, socialNetworks }: TeamProps) => (
             <Card
               key={name}
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
             >
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                <Gravatar
-                  email={email}
+                <img
+                  src={imageUrl}
                   className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
                 />
                 <CardTitle className="text-center">{name}</CardTitle>

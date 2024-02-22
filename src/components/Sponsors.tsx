@@ -1,4 +1,3 @@
-import { Radar, AirVent, Gamepad, Italic } from 'lucide-react'
 import iteam from '../assets/iteam.svg'
 import hybridity from '../assets/hybridity.svg'
 

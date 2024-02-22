@@ -1,6 +1,4 @@
 import { Card, CardDescription, CardHeader, CardTitle } from './ui/card'
-import { MagnifierIcon, WalletIcon, ChartIcon } from './Icons'
-import rack from '../assets/rack.jpg'
 
 import mistral from '../assets/mistral.png'
 import llama from '../assets/llama.png'

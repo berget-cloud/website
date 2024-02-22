@@ -1,5 +1,4 @@
 import { Button } from './ui/button'
-import { Input } from './ui/input'
 
 export const Cta = () => {
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {

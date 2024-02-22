@@ -1,18 +1,10 @@
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
-import { Badge } from './ui/badge'
-import { Button, buttonVariants } from '@/components/ui/button'
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from '@/components/ui/card'
-import { Check, Linkedin } from 'lucide-react'
-import { LightBulbIcon } from './Icons'
-import { GitHubLogoIcon } from '@radix-ui/react-icons'
-import Shell, { Code } from './ui/shell'
+import Shell from './ui/shell'
 export const HeroCards = () => {
   return (
     <div className="hidden lg:flex justify-center flex-row flex-wrap gap-8 relative w-[700px]">

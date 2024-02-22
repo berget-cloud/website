@@ -32,7 +32,7 @@ export const Hero = () => {
           </Button>
 
           <a
-            href="https://github.com/Iteam1337/berget.git"
+            href="https://github.com/berget-cloud"
             target="_blank"
             className={`w-full md:w-1/3 ${buttonVariants({
               variant: 'outline',

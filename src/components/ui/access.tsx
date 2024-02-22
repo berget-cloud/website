@@ -3,13 +3,7 @@
 import { Separator } from '@radix-ui/react-dropdown-menu'
 import { Avatar, AvatarFallback, AvatarImage } from './avatar'
 import { Button } from './button'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from './card'
+import { Card, CardContent, CardHeader, CardTitle } from './card'
 import { Input } from './input'
 
 export function Access() {
