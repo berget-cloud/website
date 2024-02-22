@@ -34,7 +34,7 @@ export const HeroCards = () => {
                 <Prompt />
                 berget create cluster
                 <br />
-                <span className="text-teal-900">Done!</span>
+                <span className="text-teal-900">Done! 5 nodes created.</span>
                 <br />
                 <span className="text-teal-900">
                   Assigned DNS: ideal-palmtree.berget.cloud
@@ -44,7 +44,10 @@ export const HeroCards = () => {
                 Nu är ditt kluster redo att användas. Nu kan du börja köra dina
                 applikationer. Du kan peka ett CNAME till klustret.
               </p>
-              <Shell>$ berget apply -f deployment.yaml</Shell>
+              <Shell>
+                <Prompt />
+                berget apply -f deployment.yaml
+              </Shell>
               <p>
                 Tips: använd fluxcd för att automatiskt hålla klustret
                 uppdaterat.
