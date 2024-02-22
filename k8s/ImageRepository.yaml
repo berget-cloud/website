@@ -5,6 +5,6 @@ metadata:
   name: berget
   namespace: flux-system
 spec:
-  image: ghcr.io/berget/website
+  image: ghcr.io/berget-cloud/website
   interval: 30s
   provider: generic
