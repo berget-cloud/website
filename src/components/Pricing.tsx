@@ -28,7 +28,7 @@ const pricingList: PricingProps[] = [
   {
     title: 'Open Source projekt',
     popular: 0,
-    price: 0,
+    price: 2000,
     description: 'Vi vill stötta alla projekt som har sin kod öppen för andra.',
     buttonText: 'Get Started',
     benefitList: [
