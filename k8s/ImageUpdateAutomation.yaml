@@ -9,7 +9,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: berget
-    namespace: flux-system
+    namespace: berget
   git:
     checkout:
       ref:
