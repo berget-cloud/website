@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM node:20
+FROM node:20 AS build
 
 # Set the working directory in the container
 WORKDIR /app
@@ -13,9 +13,17 @@ RUN npm install
 # Copy the rest of the project files to the working directory
 COPY . .
 
-# Expose a port for the application to listen on
-EXPOSE 3000
-ENV PORT=3000
-# Start the application
-CMD [ "npm", "start" ]
+# Build the application
+RUN npm build
 
+# Use an official Nginx runtime as the base image
+FROM nginx:latest
+
+# Copy the built application from the previous stage to the Nginx default public directory
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose a port for the application to listen on
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
