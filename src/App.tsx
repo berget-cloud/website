@@ -21,16 +21,16 @@ function App() {
       <Hero />
       <Features />
       <Compliance />
-      <Sponsors />
-      <About />
+      <Pricing />
       <Services />
       <Cta />
-      <Team />
-      <Pricing />
+      <FAQ />
+      <About />
       {/*
       <Newsletter />
       */}
-      <FAQ />
+      <Team />
+      <Sponsors />
       <Footer />
       <ScrollToTop />
     </>
