@@ -24,7 +24,7 @@ export const HeroCards = () => {
             <CardDescription>
               <Shell>
                 <Prompt />
-                npm i -g @berget/cli
+                npm i -g berget
                 <br />
                 <Prompt />
                 berget login
