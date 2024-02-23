@@ -7,9 +7,9 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Button } from './ui/button'
+import { Skeleton } from '@/components/ui/skeleton'
 
 import { Minus, Plus } from 'lucide-react'
-import { Bar, BarChart, ResponsiveContainer } from 'recharts'
 import React from 'react'
 import { Access } from './ui/access'
 import apps from '../assets/apps.png'
@@ -30,49 +30,10 @@ interface FeatureProps {
 }
 
 const Flexibility = () => {
-  const data = [
-    {
-      nodes: 6,
-    },
-    {
-      nodes: 2,
-    },
-    {
-      nodes: 3,
-    },
-    {
-      nodes: 3,
-    },
-    {
-      nodes: 1,
-    },
-    {
-      nodes: 2,
-    },
-    {
-      nodes: 4,
-    },
-    {
-      nodes: 5,
-    },
-    {
-      nodes: 5,
-    },
-    {
-      nodes: 5,
-    },
-    {
-      nodes: 5,
-    },
-    {
-      nodes: 5,
-    },
-    {
-      nodes: 5,
-    },
-  ]
+  const [nodes, setNodes] = React.useState(5)
+  const controllers = 1 + (nodes % 2)
+  const workers = nodes - controllers
 
-  const [nodes, setNodes] = React.useState(data.pop()?.nodes || 5)
   return (
     <Card className="ml-5 mr-5 w-full">
       <CardContent>
@@ -86,7 +47,7 @@ const Flexibility = () => {
               disabled={nodes <= 3}
             >
               <Minus className="h-4 w-4" />
-              <span className="sr-only">Decrease</span>
+              <span className="sr-only">Färre</span>
             </Button>
             <div className="flex-1 text-center">
               <div className="text-7xl font-bold tracking-tighter">{nodes}</div>
@@ -102,23 +63,26 @@ const Flexibility = () => {
               disabled={nodes >= 400}
             >
               <Plus className="h-4 w-4" />
-              <span className="sr-only">Increase</span>
+              <span className="sr-only">Fler</span>
             </Button>
           </div>
-          <div className="mt-3 h-[120px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={data}>
-                <Bar
-                  dataKey="nodes"
-                  style={
-                    {
-                      fill: 'hsl(var(--primary))',
-                      opacity: 0.9,
-                    } as React.CSSProperties
-                  }
-                />
-              </BarChart>
-            </ResponsiveContainer>
+          <p className="text-center my-4">Controllers</p>
+          <div className="mt-3 h-[120px] w-full flex flex-wrap justify-between">
+            {Array.from({ length: controllers }).map((_, index) => (
+              <Skeleton
+                key={index}
+                className="w-16 h-4 mx-4 my-2 rounded-full bg-primary"
+              />
+            ))}
+          </div>
+          <p className="text-center my-4">Workers</p>
+          <div className="mt-3 h-[120px] w-full flex flex-wrap justify-between">
+            {Array.from({ length: workers }).map((_, index) => (
+              <Skeleton
+                key={index}
+                className="w-16 h-4 mx-4 my-2 rounded-full bg-primary"
+              />
+            ))}
           </div>
         </div>
       </CardContent>
