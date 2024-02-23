@@ -24,6 +24,7 @@ spec:
   tls:
     - hosts:
         - berget.cloud
+        - www.berget.cloud
       secretName: berget-prod-tls
   rules:
     - host: berget.cloud
