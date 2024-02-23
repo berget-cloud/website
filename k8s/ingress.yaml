@@ -36,4 +36,4 @@ spec:
               service:
                 name: berget
                 port:
-                  number: 3000
+                  number: 80
