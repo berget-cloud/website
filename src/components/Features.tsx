@@ -67,7 +67,7 @@ const Flexibility = () => {
             </Button>
           </div>
           <p className="text-center my-4">Controllers</p>
-          <div className="mt-3 h-[120px] w-full flex flex-wrap justify-between">
+          <div className="mt-3 h-[50px] w-full flex flex-wrap justify-between">
             {Array.from({ length: controllers }).map((_, index) => (
               <Skeleton
                 key={index}
