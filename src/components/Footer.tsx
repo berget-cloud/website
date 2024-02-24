@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="col-span-full xl:col-span-2">
           <a href="/" className="font-bold text-xl flex">
             <LogoIcon />
-            <span className="ml-2">Berget.cloud</span>
+            <span className="ml-2">Berget</span>
           </a>
           <p className="mt-4 text-muted-foreground">
             Götgatan 18, 118 46 Stockholm

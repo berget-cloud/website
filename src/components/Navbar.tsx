@@ -53,7 +53,7 @@ export const Navbar = () => {
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <a href="/" className="ml-2 font-bold text-xl flex">
-              Berget.cloud
+              Berget
             </a>
           </NavigationMenuItem>
 
