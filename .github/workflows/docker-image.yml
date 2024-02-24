@@ -83,3 +83,11 @@ jobs:
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ steps.imagename.outputs.lowercase  }}:${{ steps.package-version.outputs.current-version}}
+
+      - name: 🚀 Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /root/.docker
+          key: ${{ runner.os }}-docker-${{ hashFiles('**/Dockerfile') }}
+          restore-keys: |
+            ${{ runner.os }}-docker-
