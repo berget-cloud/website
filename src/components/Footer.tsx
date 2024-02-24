@@ -61,7 +61,7 @@ export const Footer = () => {
           &copy; 2024{' '}
           <a
             target="_blank"
-            href="https://github.com/berget"
+            href="https://github.com/berget-cloud"
             className="text-primary transition-all border-primary hover:border-b-2"
           >
             Molnet i Berget AB
