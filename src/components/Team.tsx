@@ -109,6 +109,7 @@ export const Team = () => {
                 <img
                   src={imageUrl}
                   className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
+                  alt={name}
                 />
                 <CardTitle className="text-center">{name}</CardTitle>
                 <CardDescription className="text-primary">

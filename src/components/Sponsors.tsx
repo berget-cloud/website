@@ -8,11 +8,11 @@ interface SponsorProps {
 
 const sponsors: SponsorProps[] = [
   {
-    icon: <img src={iteam} height="26" />,
+    icon: <img src={iteam} height="26" alt="Iteam logo" />,
     name: 'Iteam',
   },
   {
-    icon: <img src={hybridity} height="26" />,
+    icon: <img src={hybridity} height="26" alt="Hybridity logo" />,
     name: 'Hybridity AI',
   },
   {
