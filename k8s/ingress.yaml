@@ -4,6 +4,7 @@ metadata:
   name: berget-ingress
   namespace: berget
   annotations:
+    nginx.ingress.kubernetes.io/enable-compression: 'true'
     nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
     nginx.ingress.kubernetes.io/http2-push-preload: 'true'
     nginx.ingress.kubernetes.io/proxy-pass-headers: 'Location'
