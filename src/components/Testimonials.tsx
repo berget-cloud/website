@@ -19,7 +19,7 @@ const testimonials: TestimonialProps[] = [
     image: 'https://github.com/shadcn.png',
     name: 'John Doe React',
     userName: '@john_Doe',
-    comment: 'This landing page is awesome!',
+    comment: 'Lorem ipsum!',
   },
   {
     image: 'https://github.com/shadcn.png',
@@ -66,13 +66,14 @@ export const Testimonials = () => {
         Varför behövs
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {' '}
-          BERGET?{' '}
+          Berget?{' '}
         </span>
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
+        Vi har frågat några av Sveriges främsta experter inom juridik och
+        datasäkerhet om varför det behövs en svensk molntjänst för AI och
+        hantering av känslig data.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
