@@ -7,9 +7,6 @@ metadata:
     nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
     nginx.ingress.kubernetes.io/http2-push-preload: 'true'
     nginx.ingress.kubernetes.io/proxy-pass-headers: 'Location'
-    nginx.ingress.kubernetes.io/server-snippet: |
-      gzip on;
-      gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript image/svg+xml;
     # nginx.ingress.kubernetes.io/configuration-snippet: |
     #   more_set_headers "Content-Security-Policy: default-src 'self'; script-src https://berget.cloud https://matomo.iteam.services; style-src https://berget.cloud; font-src https://berget.cloud; img-src https://berget.cloud; connect-src https://berget.cloud https://matomo.iteam.services; manifest-src data:; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; ";
     #   more_set_headers "X-Content-Type-Options: nosniff";
