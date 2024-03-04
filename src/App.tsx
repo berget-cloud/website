@@ -13,6 +13,7 @@ import { Team } from './components/Team'
 import { Compliance } from './components/Compliance'
 
 import './App.css'
+import { Testimonials } from './components/Testimonials'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Cta />
       <FAQ />
       <About />
+      <Testimonials />
       {/*
       <Newsletter />
       */}

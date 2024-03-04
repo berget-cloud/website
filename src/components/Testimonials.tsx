@@ -7,6 +7,9 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
+import catry from '@/assets/andre_catry.jpg'
+import jim from '@/assets/jim_runsten.jpg'
+
 interface TestimonialProps {
   image: string
   name: string
@@ -16,19 +19,21 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: 'https://github.com/shadcn.png',
-    name: 'John Doe React',
-    userName: '@john_Doe',
-    comment: 'Lorem ipsum!',
+    image: jim,
+    name: 'Jim Runsten',
+    userName: 'VD Synch Advokat AB',
+    comment:
+      'Med en svensk molnleverantör minskar det administrativa arbetet och den regulatoriska risken då det inte sker någon tredjelandsöverföring och man behöver därmed inte hålla sig ajour med utvecklingen inom regelverket för tredjelandsöverföring, adekvansbeslut och/eller göra konsekvensbedömningar för tredjelandsöverföringar. Vidare får men en leverantör som har att uppfylla samma lagstiftning som är eller blir tillämplig på en själv och således rimligtvis kommer en hel del av dokumentation tas fram av leverantören på ett sätt som redan är anpassat för svenska förhållanden.',
   },
   {
-    image: 'https://github.com/shadcn.png',
-    name: 'John Doe React',
-    userName: '@john_Doe1',
+    image: catry,
+    name: 'André Catry',
+    userName:
+      'Senior Advisor inom IT-/informationssäkerhet och cyberrisk, Advokatfirman Kahn Pedersen',
     comment:
-      'Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.',
+      'Data är idag en av de mest värdefulla tillgångar som existerar. Det är ett rimligt affärsbeslut att träna AI modeller i tjänster som inte utnyttjar ditt data för att träna någon annans modeller.',
   },
-
+  /*
   {
     image: 'https://github.com/shadcn.png',
     name: 'John Doe React',
@@ -56,7 +61,7 @@ const testimonials: TestimonialProps[] = [
     userName: '@john_Doe5',
     comment:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
+  },*/
 ]
 
 export const Testimonials = () => {
