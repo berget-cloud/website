@@ -27,6 +27,11 @@ export const About = () => {
                 som mål att göra AI tillgängligt för alla - inte bara de som
                 vågar riskera att skicka sin data till stora molnleverantörer.
               </p>
+              <p className="text-xl text-muted-foreground mt-4">
+                Hållbarhet är en annan hörnsten för Berget. Serverparken består
+                delvis av återanvända servrar från företag som migrerat till
+                molnet, vilket skapar ny nytta och minskar resursslöseri.
+              </p>
             </div>
 
             <Statistics />

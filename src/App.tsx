@@ -22,12 +22,12 @@ function App() {
       <Hero />
       <Features />
       <Compliance />
+      <Testimonials />
       <Pricing />
       <Services />
       <Cta />
       <FAQ />
       <About />
-      <Testimonials />
       {/*
       <Newsletter />
       */}
