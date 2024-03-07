@@ -64,7 +64,7 @@ export const Footer = () => {
             href="https://github.com/berget-cloud"
             className="text-primary transition-all border-primary hover:border-b-2"
           >
-            Molnet i Berget AB
+            Egend4t4 AB (under namnbyte till Berget AB)
           </a>
         </h3>
       </section>
