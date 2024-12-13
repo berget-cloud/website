@@ -13,7 +13,7 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: 'Körs allt i Sverige?',
+    question: 'Körs allt i Sverige/EU?',
     answer: 'Ja, din applikation körs i säkert i datacenter i Sverige. ',
     value: 'item-1',
   },
